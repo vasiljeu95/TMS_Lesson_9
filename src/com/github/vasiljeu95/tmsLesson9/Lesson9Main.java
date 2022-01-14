@@ -1,5 +1,6 @@
 package com.github.vasiljeu95.tmsLesson9;
 
+import java.awt.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -16,15 +17,19 @@ public class Lesson9Main {
         //array = {1, 2, 3};
 //----------------------------------------------------------------
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder = new StringBuilder("initial");
+        //stringBuilder = new StringBuilder("initial");
         stringBuilder.append(1);
         System.out.println(stringBuilder);
 
         for (int i = 0; i < 10; i++) {
-            stringBuilder.append("a");
+            stringBuilder.append(i);
         }
 
         System.out.println(stringBuilder);
+        System.out.println(stringBuilder.deleteCharAt(0));
+        System.out.println(stringBuilder.insert(0, -1));
+        //System.out.println(stringBuilder.reverse());
+        System.out.println(stringBuilder.replace(7, 10, "0"));
 
         StringBuffer stringBuffer = new StringBuffer();
         stringBuffer = new StringBuffer("initial");
@@ -37,5 +42,8 @@ public class Lesson9Main {
         while (matcher.find()) {
             System.out.println(str.substring(matcher.start(), matcher.end()));
         }
+
+        String text1 = "book that's called \"Java8\" ";
+        System.out.println(text1);
     }
 }
